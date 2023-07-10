@@ -12,8 +12,8 @@ pub struct ButtonAddResistor {
 
 }
 
-/// A button which adds a capacitor component
+/// A button which adds a direct current source component
 #[derive(Component)]
-pub struct ButtonAddCapacitor {
+pub struct ButtonAddDirectCurrentSource {
 
 }

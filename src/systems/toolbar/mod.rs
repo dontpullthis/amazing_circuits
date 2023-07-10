@@ -17,7 +17,7 @@ pub fn btn_add_resistor_handler(
 ) {
     for (interaction, mut color) in &mut interaction_query {
         match *interaction {
-            Interaction::Clicked => {
+            Interaction::Pressed => {
                 let window = window_query.get_single().unwrap();
                 let mut rng = rand::thread_rng();
                 commands.spawn((
@@ -45,12 +45,12 @@ pub fn btn_add_resistor_handler(
 pub fn btn_add_capacitor_handler(
     mut interaction_query: Query<
         (&Interaction, &mut BackgroundColor),
-        (Changed<Interaction>, With<toolbar_components::ButtonAddCapacitor>),
+        (Changed<Interaction>, With<toolbar_components::ButtonAddDirectCurrentSource>),
     >,
 ) {
     for (interaction, mut color) in &mut interaction_query {
         match *interaction {
-            Interaction::Clicked => {
+            Interaction::Pressed => {
                 
             }
             Interaction::Hovered => {
